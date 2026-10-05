@@ -1,69 +1,35 @@
 # Fraction Conquest
 
-Fraction Conquest is a browser-based educational game for practicing fractions (grades 5-7, ages 11-13).  
-The player solves math tasks to capture territories on a map: correct answers expand control, incorrect answers lose ground.
+**[▶ Play in the browser](https://gluonmaster.github.io/fraction-conquest/)** · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
-Language versions:
+A fractions game for grades 5 to 7 (ages 11 to 13). Each correct answer conquers a territory on the map, each wrong one gives ground back, so a practice session turns into a small strategy match. Teachers and parents can choose the topics and the difficulty. The game runs in the browser, in German or Russian, with no installation and no account.
 
-- Russian: `README.ru.md`
-- German: `README.de.md`
+![Fraction task next to the territory map](docs/screenshots/game.png)
 
-## Idea
+## Features
 
-The project combines:
+- 11 topics: simplifying, mixed numbers, common denominators, the four operations, conversions between fractions and decimals, and combined expressions.
+- 4 difficulty levels.
+- Instant feedback, with an explanation after every wrong answer.
+- A settings page ([admin.html](admin.html)) for topics, difficulty and timer.
+- A test page ([test.html](test.html)) that checks the maths engine in the browser.
+- Plain HTML, CSS and JavaScript, without frameworks or a build step.
 
-- Fraction practice and step-by-step reasoning
-- Short game loops with visible progress (map conquest)
-- Adjustable difficulty and topics for classroom or self-study use
+## Controls
 
-The goal is to make repeated fraction practice more engaging without adding external dependencies or setup complexity.
+- Click one of the six answers, or press `1` to `6`.
+- After a wrong answer, read the explanation and continue to the next task.
 
-## Key Features
+## Running it locally
 
-- 11 fraction-related topics (simplification, mixed numbers, operations, decimals, combined expressions)
-- 4 difficulty levels
-- Territory conquest gameplay with immediate feedback
-- Explanation text for incorrect answers
-- RU/DE in-app localization
-- Admin settings page (`admin.html`)
-- Built-in test page for math engine checks (`test.html`)
-- Pure frontend: HTML + CSS + JavaScript (no frameworks, no build step)
-
-## Run Locally
-
-### Option 1: Open directly (fastest)
-
-1. Download the repository:
-   - `git clone https://github.com/gluonMaster/Educational-game.git`
-   - or download ZIP from GitHub and extract it
-2. Open the project folder.
-3. Launch files in your browser:
-   - Main game: `index.html`
-   - Settings: `admin.html`
-   - Tests: `test.html`
-
-### Option 2: Run with a local server (recommended)
-
-From the project folder:
+Download or clone the repository and open `index.html` in a browser. Opening the files through a local server is closer to the online version:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open:
+Then open `http://localhost:8000/index.html` (or `admin.html`, `test.html`). The game is made for screens of 1024×768 and larger in current Chrome, Firefox and Edge. Settings and progress are stored in the browser's `localStorage`.
 
-- `http://localhost:8000/index.html`
-- `http://localhost:8000/admin.html`
-- `http://localhost:8000/test.html`
+## Credits and license
 
-## Controls
-
-- Mouse: click one of 6 answer buttons
-- Keyboard: keys `1-6` select answers
-- After an incorrect answer, click `Continue` to move to the next task
-
-## Technical Notes
-
-- Recommended desktop resolution: `1024x768` or higher
-- Target browsers: Chrome/Firefox/Edge 90+
-- Settings and game progress are stored in `localStorage`
+Made by Dr. Konstantin S. Shakun with the help of AI coding agents. The code is available under the [MIT License](LICENSE).

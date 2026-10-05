@@ -1,69 +1,35 @@
-# Fraction Conquest
+# Fraction Conquest (Bruch-Eroberung)
 
-Fraction Conquest ist ein browserbasiertes Lernspiel zum Üben von Brüchen (Klassen 5-7, Alter 11-13).  
-Die Spielerin oder der Spieler löst Mathematikaufgaben und erobert Gebiete auf der Karte: richtige Antworten erweitern die Kontrolle, falsche Antworten führen zu Verlusten.
+**[▶ Im Browser spielen](https://gluonmaster.github.io/fraction-conquest/)** · [English](README.md) · [Русский](README.ru.md)
 
-Sprachversionen:
+Ein Lernspiel zum Bruchrechnen für die Klassen 5 bis 7 (11 bis 13 Jahre). Jede richtige Antwort erobert ein Gebiet auf der Karte, jede falsche kostet eins, sodass aus einer Übungsrunde ein kleines Strategiespiel wird. Lehrkräfte und Eltern stellen Themen und Schwierigkeit ein. Das Spiel läuft im Browser, auf Deutsch oder Russisch, ohne Installation und ohne Konto.
 
-- Russisch: `README.ru.md`
-- Deutsch: `README.de.md`
+![Bruchaufgabe neben der Gebietskarte](docs/screenshots/game.png)
 
-## Idee der Anwendung
+## Funktionen
 
-Das Projekt verbindet:
+- 11 Themen: Kürzen, gemischte Zahlen, gemeinsamer Nenner, die vier Grundrechenarten, Umwandlung zwischen Brüchen und Dezimalzahlen sowie kombinierte Aufgaben.
+- 4 Schwierigkeitsstufen.
+- Sofortige Rückmeldung mit einer Erklärung nach jeder falschen Antwort.
+- Einstellungsseite ([admin.html](admin.html)) für Themen, Schwierigkeit und Timer.
+- Testseite ([test.html](test.html)), die die Mathe-Engine im Browser prüft.
+- Reines HTML, CSS und JavaScript, ohne Frameworks und Build-Schritt.
 
-- Bruchtraining mit schrittweiser Erklärung
-- Kurze Spielzyklen mit sichtbarem Fortschritt (Karteneroberung)
-- Einstellbaren Schwierigkeitsgrad und Themen für Schule und Selbstlernen
+## Steuerung
 
-Das Ziel ist, regelmäßiges Bruchtraining motivierender zu machen, ohne externe Abhängigkeiten oder komplizierten Build-Prozess.
+- Auf eine der sechs Antworten klicken oder `1` bis `6` drücken.
+- Nach einer falschen Antwort die Erklärung lesen und mit der nächsten Aufgabe weitermachen.
 
-## Hauptfunktionen
+## Lokal starten
 
-- 11 Bruchthemen (Kürzen, gemischte Zahlen, Rechenoperationen, Dezimalzahlen, kombinierte Ausdrücke)
-- 4 Schwierigkeitsstufen
-- Eroberungs-Gameplay mit sofortigem Feedback
-- Erklärungstexte bei falschen Antworten
-- RU/DE-Lokalisierung in der App
-- Admin-Seite für Einstellungen (`admin.html`)
-- Integrierte Testseite für den Math-Engine-Check (`test.html`)
-- Reines Frontend: HTML + CSS + JavaScript (ohne Frameworks und Build-Schritt)
-
-## Lokales Starten
-
-### Option 1: Direkt öffnen (am schnellsten)
-
-1. Repository herunterladen:
-   - `git clone https://github.com/gluonMaster/Educational-game.git`
-   - oder ZIP von GitHub herunterladen und entpacken
-2. Projektordner öffnen.
-3. Dateien im Browser starten:
-   - Spiel: `index.html`
-   - Einstellungen: `admin.html`
-   - Tests: `test.html`
-
-### Option 2: Mit lokalem Server (empfohlen)
-
-Im Projektordner ausführen:
+Repository herunterladen oder klonen und `index.html` im Browser öffnen. Über einen lokalen Server verhält sich das Spiel wie die Online-Version:
 
 ```bash
 python -m http.server 8000
 ```
 
-Dann öffnen:
+Danach `http://localhost:8000/index.html` öffnen (oder `admin.html`, `test.html`). Das Spiel ist für Bildschirme ab 1024×768 in aktuellen Versionen von Chrome, Firefox und Edge gedacht. Einstellungen und Fortschritt werden im `localStorage` des Browsers gespeichert.
 
-- `http://localhost:8000/index.html`
-- `http://localhost:8000/admin.html`
-- `http://localhost:8000/test.html`
+## Autor und Lizenz
 
-## Steuerung
-
-- Maus: Klick auf eine von 6 Antwortoptionen
-- Tastatur: Tasten `1-6` wählen Antworten
-- Nach einer falschen Antwort mit `Continue` zur nächsten Aufgabe wechseln
-
-## Technische Hinweise
-
-- Empfohlene Desktop-Auflösung: `1024x768` oder höher
-- Zielbrowser: Chrome/Firefox/Edge 90+
-- Einstellungen und Fortschritt werden in `localStorage` gespeichert
+Entwickelt von Dr. Konstantin S. Shakun mit Unterstützung von KI-Coding-Agenten. Der Code steht unter der [MIT-Lizenz](LICENSE).
